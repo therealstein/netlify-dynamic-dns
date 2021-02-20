@@ -1,0 +1,21 @@
+{
+  "name": "netlify-dynamic-dns",
+  "version": "1.0.0",
+  "description": "Script to dynamically update Netlify DNS (A and AAAA)",
+  "main": "index.js",
+  "keywords": [
+    "netlify",
+    "dyndns",
+    "api",
+    "dns",
+    "ipv6",
+    "ipv4"
+  ],
+  "author": "Vexcited",
+  "license": "ISC",
+  "dependencies": {
+    "netlify": "^6.1.6",
+    "public-ip": "^4.0.3",
+    "yargs": "^16.2.0"
+  }
+}
