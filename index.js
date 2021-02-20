@@ -26,7 +26,7 @@ const argv = yargs
 // Write logs.txt
 const writeLog = (success, message) => {
 	let content = `${(success) ? "[OK]" : "[ERROR]"} ${message}`;
-	fs.appendFile('console.log', `${content}\n`, function (err) {
+	fs.appendFile(`${__dirname}/console.log`, `${content}\n`, function (err) {
 		if (err) throw err;
 		console.log(content);
 	});
