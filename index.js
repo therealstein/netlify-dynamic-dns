@@ -164,7 +164,7 @@ if (!argv.token || !argv.hostname || !argv.type) {
 }
 else {
 	// Refresh log file...
-	fs.appendFile(`${__dirname}/console.log`, "", function (err) {
+	fs.writeFile(`${__dirname}/console.log`, "", function (err) {
 		if (err) throw err;
 		writeLog(true, `[${new Date()}] Started update process.\nHostname (to update): ${argv.hostname}\nType: ${argv.type}\nToken: ${argv.token.substr(0, 8)}...`);
 		
