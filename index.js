@@ -163,8 +163,12 @@ if (!argv.token || !argv.hostname || !argv.type) {
 	writeLog(false, 'Args: --hostname || --type || --token is missing ! Exiting...');
 }
 else {
-	writeLog(true, `[${new Date()}] Started update process.\nHostname (to update): ${argv.hostname}\nType: ${argv.type}\nToken: ${argv.token.substr(0, 8)}...`);
-
-	// Start !
-	start();
+	// Refresh log file...
+	fs.appendFile(`${__dirname}/console.log`, "", function (err) {
+		if (err) throw err;
+		writeLog(true, `[${new Date()}] Started update process.\nHostname (to update): ${argv.hostname}\nType: ${argv.type}\nToken: ${argv.token.substr(0, 8)}...`);
+		
+		// Start !
+		start();
+	});
 }
