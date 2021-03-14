@@ -10,7 +10,7 @@ Here -h means --hostname <br />
 
 ## Update DNS dynamically
 You can do this with crontab on Linux. <br />
-`sudo crontab -e`
+`crontab -e`
 
 then you can schedule this script every 5 mins like this:
 ```
