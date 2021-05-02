@@ -8,6 +8,10 @@ Here -h means --hostname <br />
 -a means the type, so A (IPv4) or AAAA (IPv6) <br />
 -t is your personnal token that can be found in Netlify at "User settings" > "Applications" > "New access token".
 
+## Use with ngrok free
+Script derives subdomain names from your ngrok config.
+`node index -h "example.com" -a "CNAME" -t "<TOKEN_HERE>" -n http://localhost:4040"`
+
 ## Update DNS dynamically
 You can do this with crontab on Linux. <br />
 `crontab -e`
