@@ -20,3 +20,7 @@ then you can schedule this script every 5 mins like this:
 ```
 */5 * * * * /path/to/node /path/to/index.js -h "sub.example.com" -a "A" -t "<TOKEN_HERE>"
 ```
+## Use with docker
+Build
+`docker build -t netlify-dns .`
+`docker run --rm --net="host" netlify-dns -h "example.com" -a "CNAME" -t "<TOKEN_HERE>" -n http://localhost:4040"`
